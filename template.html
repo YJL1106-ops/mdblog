@@ -1,1 +1,48 @@
-TEMPLATE-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITLE}} · {{SITE_TITLE}}</title>
+<meta name="description" content="{{SITE_DESCRIPTION}}">
+<style>
+:root { --bg:#faf9f6; --fg:#2d2a26; --accent:#e0664f; --muted:#88827a; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif; background:var(--bg); color:var(--fg); line-height:1.75; }
+.container { max-width:720px; margin:0 auto; padding:48px 24px; }
+header { border-bottom:2px solid #e8e4dd; padding-bottom:20px; margin-bottom:36px; }
+header h1 a { color:var(--fg); text-decoration:none; }
+nav { margin-top:8px; font-size:14px; color:var(--muted); }
+h1 { font-size:1.9rem; }
+h2 { font-size:1.4rem; margin:28px 0 12px; }
+h3 { font-size:1.15rem; margin:22px 0 10px; }
+p { margin:12px 0; }
+a { color:var(--accent); }
+code { background:#f0ede7; padding:2px 6px; border-radius:4px; font-size:.9em; }
+pre { background:#2d2a26; color:#f2efe9; padding:16px; border-radius:8px; overflow-x:auto; margin:14px 0; }
+pre code { background:none; color:inherit; padding:0; }
+blockquote { border-left:4px solid var(--accent); padding:4px 16px; color:var(--muted); background:#f4f1ec; border-radius:0 6px 6px 0; margin:14px 0; }
+ul,ol { margin:12px 0 12px 24px; }
+li { margin:6px 0; }
+.meta { color:var(--muted); font-size:.85rem; }
+.posts { list-style:none; margin-left:0; }
+.posts li { padding:14px 0; border-bottom:1px dashed #e0dcd4; }
+.posts li a { font-size:1.1rem; font-weight:600; color:var(--fg); text-decoration:none; }
+.posts li a:hover { color:var(--accent); }
+.posts .meta { display:block; margin-top:4px; }
+footer { margin-top:56px; padding-top:20px; border-top:2px solid #e8e4dd; color:var(--muted); font-size:.85rem; text-align:center; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1><a href="index.html">{{SITE_TITLE}}</a></h1>
+  <nav>{{SITE_DESCRIPTION}}</nav>
+</header>
+<main>
+{{CONTENT}}
+</main>
+<footer>© {{YEAR}} {{SITE_TITLE}} · Powered by mdblog</footer>
+</div>
+</body>
+</html>
